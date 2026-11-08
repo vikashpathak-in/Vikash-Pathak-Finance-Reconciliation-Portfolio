@@ -109,6 +109,20 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 .greeting-close{margin-left:auto;background:transparent;color:var(--accent)}
 @media(max-width:560px){nav{gap:12px}nav .name{width:100%}.theme-toggle{margin-left:auto}}
 
+
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.project-card{background:var(--surface);border:1px solid var(--rule);border-radius:9px;padding:20px;display:flex;flex-direction:column;min-height:205px}
+.project-card h3{font:700 21px/1.2 var(--serif);margin:7px 0}
+.project-card p{color:var(--muted);font-size:14.5px;margin:0 0 16px;flex:1}
+.project-card a{font-weight:600;text-decoration:none}
+.project-card a:hover{text-decoration:underline}
+.project-type{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.resume-actions{display:flex;gap:10px;flex-wrap:wrap}
+.resume-actions button{font-family:var(--sans);cursor:pointer}
+.resume-note{margin-top:14px;padding:12px 14px;background:var(--tint);border-radius:7px;color:var(--muted);font-size:14px}
+body.concise-experience #experience .job:nth-of-type(n+3){display:none}
+@media print{#projects,#resume-tools{display:none}}
+
 </style>
 <link rel="canonical" href="https://vikashp23.github.io/vikash-pathak-resume/">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -141,6 +155,7 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark mode</button>
@@ -253,6 +268,49 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
     </div>
   </section>
 
+
+  <section id="projects">
+    <h2 class="sec">Selected Projects</h2>
+    <p class="about">Alongside my finance and accounting work, I build practical digital projects focused on business operations, food services and career support.</p>
+    <div class="project-grid">
+      <article class="project-card">
+        <div class="project-type">Finance &amp; compliance</div>
+        <h3>DigiCafe</h3>
+        <p>Digital services initiative for accounting, GST, income tax and business compliance support.</p>
+        <a href="https://vikashp23.github.io/Digicafe/" target="_blank" rel="noopener">Visit DigiCafe</a>
+      </article>
+      <article class="project-card">
+        <div class="project-type">Career development</div>
+        <h3>DigiCareer</h3>
+        <p>Career resource platform with job opportunity links and interview practice features.</p>
+        <a href="https://digicareer.onrender.com" target="_blank" rel="noopener">Visit DigiCareer</a>
+      </article>
+      <article class="project-card">
+        <div class="project-type">Travel planning</div>
+        <h3>DigiTravel</h3>
+        <p>Travel planning website with trip discovery and rail information features under development.</p>
+        <a href="https://vikashp23.github.io/Digitravel/" target="_blank" rel="noopener">Visit DigiTravel</a>
+      </article>
+      <article class="project-card">
+        <div class="project-type">Food &amp; small business</div>
+        <h3>TasteHub</h3>
+        <p>Vegetarian homemade food venture with a menu website and customer ordering information.</p>
+        <a href="https://vikashp23.github.io/tastehub-website/index.html" target="_blank" rel="noopener">Visit TasteHub</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="resume-tools">
+    <h2 class="sec">Interactive Resume</h2>
+    <p class="about">Use these quick actions to explore my experience or access the resume format you need.</p>
+    <div class="resume-actions">
+      <button class="btn primary" type="button" id="expand-experience">Show all experience details</button>
+      <button class="btn ghost" type="button" id="collapse-experience">Show concise view</button>
+      <button class="btn ghost" type="button" id="print-resume">Print / Save as PDF</button>
+    </div>
+    <div class="resume-note" id="resume-note" aria-live="polite">Experience details are shown on the page. Use Print / Save as PDF to create a copy from your browser.</div>
+  </section>
+
   <section id="education">
     <h2 class="sec">Education and certification</h2>
     <div class="edu">
@@ -316,6 +374,27 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
   if(!sessionStorage.getItem('vikash-portfolio-greeting-dismissed')){
     window.setTimeout(()=>backdrop.classList.add('is-visible'),700);
   }
+})();
+</script>
+
+
+<script>
+(function(){
+  const expand=document.getElementById('expand-experience');
+  const collapse=document.getElementById('collapse-experience');
+  const print=document.getElementById('print-resume');
+  const note=document.getElementById('resume-note');
+  expand.addEventListener('click',function(){
+    document.body.classList.remove('concise-experience');
+    note.textContent='All listed roles and responsibilities are visible.';
+    document.getElementById('experience').scrollIntoView({behavior:'smooth'});
+  });
+  collapse.addEventListener('click',function(){
+    document.body.classList.add('concise-experience');
+    note.textContent='Concise view enabled. Earlier experience details are temporarily collapsed; choose Show all experience details to restore them.';
+    document.getElementById('experience').scrollIntoView({behavior:'smooth'});
+  });
+  print.addEventListener('click',function(){window.print();});
 })();
 </script>
 
