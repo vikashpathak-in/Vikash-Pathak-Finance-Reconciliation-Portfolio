@@ -95,6 +95,20 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{body{background:#fff;color:#000;font-size:11.5px;line-height:1.45}nav,.cta,.close,.btn,body::before{display:none}.hero{display:block;padding:0 0 12px}.wrap{max-width:none;padding:0}section{padding:14px 0}h2.sec{font-size:18px;margin-bottom:10px}.job{break-inside:avoid;padding:10px 0}.chips li{border:0;padding:0 8px 0 0}.edu div{border:0;padding:0}a{color:#000;text-decoration:none}}
+
+.theme-toggle{font:600 13px var(--sans);color:var(--accent);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer}
+.greeting-backdrop{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:20px;background:rgba(8,18,20,.58);backdrop-filter:blur(4px)}
+.greeting-backdrop.is-visible{display:grid}
+.greeting-card{width:min(100%,430px);background:var(--surface);color:var(--ink);border:1px solid var(--rule);border-radius:14px;padding:26px;box-shadow:0 20px 70px rgba(0,0,0,.24)}
+.greeting-card .eyebrow{color:var(--accent);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.greeting-card h2{font:700 30px/1.1 var(--serif);margin:9px 0}
+.greeting-card p{color:var(--muted);margin:0 0 18px}
+.greeting-actions{display:flex;gap:10px;flex-wrap:wrap}
+.greeting-actions button{font:600 14px var(--sans);border:1px solid var(--accent);border-radius:6px;padding:10px 14px;cursor:pointer}
+.greeting-actions .go{background:var(--accent);color:var(--accent-ink)}
+.greeting-close{margin-left:auto;background:transparent;color:var(--accent)}
+@media(max-width:560px){nav{gap:12px}nav .name{width:100%}.theme-toggle{margin-left:auto}}
+
 </style>
 <link rel="canonical" href="https://vikashp23.github.io/vikash-pathak-resume/">
 <meta name="robots" content="index,follow,max-image-preview:large">
@@ -108,6 +122,19 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 <meta name="twitter:description" content="Professional portfolio of Vikash Pathak, Senior Accounts Executive in Bengaluru, with experience in bank and payment gateway reconciliation, accounting operations, refunds, GST and TDS support.">
 </head>
 <body>
+
+<div class="greeting-backdrop" id="greeting-backdrop" role="dialog" aria-modal="true" aria-labelledby="greeting-title">
+  <div class="greeting-card">
+    <div class="eyebrow">Vikash Pathak · Professional Portfolio</div>
+    <h2 id="greeting-title">Good day</h2>
+    <p id="greeting-message">Explore my experience in accounting operations, reconciliation and compliance.</p>
+    <div class="greeting-actions">
+      <button class="go" id="greeting-explore" type="button">Explore portfolio</button>
+      <button class="greeting-close" id="greeting-close" type="button">Close</button>
+    </div>
+  </div>
+</div>
+
 <div class="wrap">
   <nav aria-label="Main">
     <span class="name">Vikash Pathak</span>
@@ -116,13 +143,14 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
     <a href="#skills">Skills</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark mode</button>
   </nav>
 
   <header class="hero">
     <div>
       <h1>Vikash Pathak</h1>
       <p class="role">Senior Accounts Executive: bank and payment gateway reconciliation, accounting operations, GST and TDS</p>
-      <p class="lede">I keep bank, payment gateway and ledger numbers matching, day after day. Nine years in finance and accounts, now at Via.com in Bengaluru.</p>
+      <p class="lede">I keep bank, payment gateway and ledger numbers matching, day after day. Over nine years of experience across accounting, audit support and finance operations, currently with Via.com in Bengaluru.</p>
       <div class="cta">
         <a class="btn primary" href="resume/Vikash-Pathak-Resume.pdf" download>Download resume (PDF)</a>
         <a class="btn ghost" href="resume/Vikash-Pathak-Resume.docx" download>Download editable resume (Word)</a>
@@ -144,7 +172,7 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 
   <section id="about">
     <h2 class="sec">About</h2>
-    <p class="about">I’m a Senior Accounts Executive with 9 years of professional experience, including accounting, audit support and finance operations roles. At Ebix Travels (Via.com) I verify agent and distributor deposits against bank statements, update wallet balances, reconcile payment gateways daily and process airline and wallet refunds. Earlier roles covered GST reconciliation, ledger posting, journal entries and ROC/MCA compliance documentation. I work carefully and use Excel (Pivot Tables, XLOOKUP, SUMIFS) and Tally Prime in my daily work.</p>
+    <p class="about">I’m a Senior Accounts Executive with over nine years of professional experience across accounting, audit support and finance operations. At Ebix Travels (Via.com) I verify agent and distributor deposits against bank statements, update wallet balances, reconcile payment gateways daily and process airline and wallet refunds. Earlier roles covered GST reconciliation, ledger posting, journal entries and ROC/MCA compliance documentation. I work carefully and use Excel (Pivot Tables, XLOOKUP, SUMIFS) and Tally Prime in my daily work.</p>
   </section>
 
   <section id="experience">
@@ -168,7 +196,7 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
     <div class="job">
       <div class="when">Aug 2018 – Jan 2020</div>
       <div>
-        <h3>Operations Manager</h3>
+        <h3>Accounts &amp; Compliance Executive</h3>
         <div class="co">Kautilya Corporate Solutions Pvt. Ltd.</div>
         <ul>
           <li>Handled GST reconciliation and supported GST filing and compliance for clients.</li>
@@ -248,5 +276,48 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 
   <footer>© Vikash Pathak. References available on request.</footer>
 </div>
+
+<script>
+(function(){
+  const root=document.documentElement;
+  const themeButton=document.getElementById('theme-toggle');
+  const savedTheme=localStorage.getItem('vikash-portfolio-theme');
+  if(savedTheme==='dark'||savedTheme==='light') root.setAttribute('data-theme',savedTheme);
+  function syncThemeButton(){
+    const dark=root.getAttribute('data-theme')==='dark' ||
+      (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    themeButton.textContent=dark?'Light mode':'Dark mode';
+    themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
+  }
+  syncThemeButton();
+  themeButton.addEventListener('click',function(){
+    const currentlyDark=root.getAttribute('data-theme')==='dark' ||
+      (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const nextTheme=currentlyDark?'light':'dark';
+    root.setAttribute('data-theme',nextTheme);
+    localStorage.setItem('vikash-portfolio-theme',nextTheme);
+    syncThemeButton();
+  });
+  const hour=new Date().getHours();
+  const greeting=hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';
+  const messages={
+    morning:'Start the day with clear numbers and reliable reconciliations. Explore my accounting and finance experience.',
+    afternoon:'Good afternoon. See how I work across bank reconciliation, payment gateways, refunds and accounting operations.',
+    evening:'Good evening. Thank you for visiting. Explore my experience, skills and resume.'
+  };
+  const backdrop=document.getElementById('greeting-backdrop');
+  const close=()=>{backdrop.classList.remove('is-visible');sessionStorage.setItem('vikash-portfolio-greeting-dismissed','1');};
+  document.getElementById('greeting-title').textContent=greeting;
+  document.getElementById('greeting-message').textContent=messages[hour<12?'morning':hour<17?'afternoon':'evening'];
+  document.getElementById('greeting-close').addEventListener('click',close);
+  document.getElementById('greeting-explore').addEventListener('click',function(){close();document.getElementById('experience').scrollIntoView({behavior:'smooth'});});
+  backdrop.addEventListener('click',function(e){if(e.target===backdrop)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&backdrop.classList.contains('is-visible'))close();});
+  if(!sessionStorage.getItem('vikash-portfolio-greeting-dismissed')){
+    window.setTimeout(()=>backdrop.classList.add('is-visible'),700);
+  }
+})();
+</script>
+
 </body>
 </html>
