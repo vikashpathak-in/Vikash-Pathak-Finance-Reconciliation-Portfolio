@@ -25,7 +25,7 @@
     color-scheme:dark;
   }
 }
-:root[data-theme="dark"]{
+:root[data-theme="dark]{
   --bg:#10191d; --surface:#17252b; --ink:#e8eeea; --muted:#9fb0b6;
   --accent:#6fc2b6; --accent-ink:#0c1a1d; --rule:#2c3d44; --tint:#1c2e33;
   color-scheme:dark;
@@ -41,7 +41,6 @@ nav{display:flex;gap:20px;flex-wrap:wrap;padding:18px 0;font-size:14.5px;border-
 nav a{color:var(--muted);text-decoration:none}
 nav a:hover{color:var(--ink);text-decoration:underline}
 nav .name{margin-right:auto;color:var(--ink);font-weight:600}
-
 .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;padding:56px 0 52px;align-items:center}
 h1{font:700 clamp(38px,7vw,60px)/1.04 var(--serif);letter-spacing:-.02em;margin:0 0 16px}
 .role{font:500 clamp(18px,3vw,22px)/1.4 var(--serif);color:var(--accent);margin:0 0 18px}
@@ -51,7 +50,6 @@ h1{font:700 clamp(38px,7vw,60px)/1.04 var(--serif);letter-spacing:-.02em;margin:
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
 .btn.ghost{color:var(--accent)}
 .btn:hover{filter:brightness(1.08)}
-
 .close{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:22px}
 .close h2{font:700 20px/1.2 var(--serif);margin:0 0 4px}
 .close p{margin:0 0 16px;color:var(--muted);font-size:14px}
@@ -60,11 +58,9 @@ h1{font:700 clamp(38px,7vw,60px)/1.04 var(--serif);letter-spacing:-.02em;margin:
 .close li::before{content:counter(s);width:26px;height:26px;border-radius:50%;background:var(--tint);color:var(--accent);font-weight:600;font-size:13px;display:grid;place-items:center}
 .close li span{color:var(--muted);display:block;font-size:13.5px}
 .tick{margin-top:12px;padding:10px 12px;background:var(--tint);border-radius:6px;font-size:14px;font-weight:500}
-
 section{padding:48px 0;border-top:1px solid var(--rule)}
 h2.sec{font:700 clamp(26px,4vw,34px)/1.15 var(--serif);letter-spacing:-.01em;margin:0 0 24px}
 .about{max-width:68ch;font-size:17px}
-
 .job{display:grid;grid-template-columns:150px 1fr;gap:8px 28px;padding:22px 0;border-top:1px solid var(--rule)}
 .job:first-of-type{border-top:0;padding-top:0}
 .when{color:var(--muted);font-size:14px;padding-top:3px}
@@ -73,29 +69,20 @@ h2.sec{font:700 clamp(26px,4vw,34px)/1.15 var(--serif);letter-spacing:-.01em;mar
 .job ul{margin:0;padding-left:18px}
 .job li{margin-bottom:6px}
 .job li::marker{color:var(--accent)}
-
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:28px}
 .skills h3{font:700 18px/1.2 var(--serif);margin:0 0 10px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
 .chips li{background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:5px 13px;font-size:14px}
-
 .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .edu div{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:18px}
 .edu strong{display:block;font:700 18px/1.3 var(--serif)}
 .edu span{display:block;color:var(--muted);font-size:14.5px;margin-top:4px}
-
 .contact-list{list-style:none;margin:0 0 22px;padding:0;font-size:17px}
 .contact-list li{padding:6px 0}
 footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);font-size:13.5px}
-
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr;gap:32px;padding:40px 0}
-  .job{grid-template-columns:1fr;gap:2px}
-  .when{padding:0 0 4px}
-}
+@media (max-width:760px){.hero{grid-template-columns:1fr;gap:32px;padding:40px 0}.job{grid-template-columns:1fr;gap:2px}.when{padding:0 0 4px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{body{background:#fff;color:#000;font-size:11.5px;line-height:1.45}nav,.cta,.close,.btn,body::before{display:none}.hero{display:block;padding:0 0 12px}.wrap{max-width:none;padding:0}section{padding:14px 0}h2.sec{font-size:18px;margin-bottom:10px}.job{break-inside:avoid;padding:10px 0}.chips li{border:0;padding:0 8px 0 0}.edu div{border:0;padding:0}a{color:#000;text-decoration:none}}
-
 .theme-toggle{font:600 13px var(--sans);color:var(--accent);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer}
 .greeting-backdrop{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:20px;background:rgba(8,18,20,.58);backdrop-filter:blur(4px)}
 .greeting-backdrop.is-visible{display:grid}
@@ -108,8 +95,6 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 .greeting-actions .go{background:var(--accent);color:var(--accent-ink)}
 .greeting-close{margin-left:auto;background:transparent;color:var(--accent)}
 @media(max-width:560px){nav{gap:12px}nav .name{width:100%}.theme-toggle{margin-left:auto}}
-
-
 .project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
 .project-card{background:var(--surface);border:1px solid var(--rule);border-radius:9px;padding:20px;display:flex;flex-direction:column;min-height:205px}
 .project-card h3{font:700 21px/1.2 var(--serif);margin:7px 0}
@@ -122,21 +107,19 @@ footer{padding:26px 0 34px;border-top:1px solid var(--rule);color:var(--muted);f
 .resume-note{margin-top:14px;padding:12px 14px;background:var(--tint);border-radius:7px;color:var(--muted);font-size:14px}
 body.concise-experience #experience .job:nth-of-type(n+3){display:none}
 @media print{#projects,#resume-tools{display:none}}
-
 </style>
-<link rel="canonical" href="https://vikashp23.github.io/vikash-pathak-resume/">
+<link rel="canonical" href="https://vikashpathak-in.github.io/vikash-pathak-resume/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="keywords" content="Vikash Pathak, Senior Accounts Executive Bengaluru, bank reconciliation, payment gateway reconciliation, accounting operations, GST TDS">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Vikash Pathak | Senior Accounts Executive in Bengaluru">
 <meta property="og:description" content="Professional portfolio of Vikash Pathak, Senior Accounts Executive in Bengaluru, with experience in bank and payment gateway reconciliation, accounting operations, refunds, GST and TDS support.">
-<meta property="og:url" content="https://vikashp23.github.io/vikash-pathak-resume/">
+<meta property="og:url" content="https://vikashpathak-in.github.io/vikash-pathak-resume/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vikash Pathak | Senior Accounts Executive in Bengaluru">
 <meta name="twitter:description" content="Professional portfolio of Vikash Pathak, Senior Accounts Executive in Bengaluru, with experience in bank and payment gateway reconciliation, accounting operations, refunds, GST and TDS support.">
 </head>
 <body>
-
 <div class="greeting-backdrop" id="greeting-backdrop" role="dialog" aria-modal="true" aria-labelledby="greeting-title">
   <div class="greeting-card">
     <div class="eyebrow">Vikash Pathak · Professional Portfolio</div>
@@ -148,19 +131,12 @@ body.concise-experience #experience .job:nth-of-type(n+3){display:none}
     </div>
   </div>
 </div>
-
 <div class="wrap">
   <nav aria-label="Main">
     <span class="name">Vikash Pathak</span>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">Dark mode</button>
   </nav>
-
   <header class="hero">
     <div>
       <h1>Vikash Pathak</h1>
@@ -173,8 +149,7 @@ body.concise-experience #experience .job:nth-of-type(n+3){display:none}
       </div>
     </div>
     <aside class="close" aria-label="How a day closes">
-      <h2>How a day closes</h2>
-      <p>My daily reconciliation routine at Via.com.</p>
+      <h2>How a day closes</h2><p>My daily reconciliation routine at Via.com.</p>
       <ol>
         <li><div>Bank statements in<span>Download statements and check agent and distributor deposits</span></div></li>
         <li><div>Deposits matched<span>Bank-to-system reconciliation</span></div></li>
@@ -184,157 +159,50 @@ body.concise-experience #experience .job:nth-of-type(n+3){display:none}
       <div class="tick">Ledger accuracy confirmed, daily bank debit summary prepared.</div>
     </aside>
   </header>
-
-  <section id="about">
-    <h2 class="sec">About</h2>
-    <p class="about">I’m a Senior Accounts Executive with over nine years of professional experience across accounting, audit support and finance operations. At Ebix Travels (Via.com) I verify agent and distributor deposits against bank statements, update wallet balances, reconcile payment gateways daily and process airline and wallet refunds. Earlier roles covered GST reconciliation, ledger posting, journal entries and ROC/MCA compliance documentation. I work carefully and use Excel (Pivot Tables, XLOOKUP, SUMIFS) and Tally Prime in my daily work.</p>
-  </section>
-
+  <section id="about"><h2 class="sec">About</h2><p class="about">I’m a Senior Accounts Executive with over nine years of professional experience across accounting, audit support and finance operations. At Ebix Travels (Via.com) I verify agent and distributor deposits against bank statements, update wallet balances, reconcile payment gateways daily and process airline and wallet refunds. Earlier roles covered GST reconciliation, ledger posting, journal entries and ROC/MCA compliance documentation. I work carefully and use Excel (Pivot Tables, XLOOKUP, SUMIFS) and Tally Prime in my daily work.</p></section>
   <section id="experience">
     <h2 class="sec">Experience</h2>
-    <div class="job">
-      <div class="when">Jan 2020 – Present</div>
-      <div>
-        <h3>Senior Accounts Executive</h3>
-        <div class="co">Ebix Travels Pvt. Ltd. (Via.com), Bengaluru</div>
-        <ul>
-          <li>Verify agent and distributor deposits against bank statements and update agent wallet balances after verification.</li>
-          <li>Perform daily bank-to-system and payment gateway reconciliation across PayU, CCAvenue, TPSL, HDFC and ICICI; identify and resolve mismatches.</li>
-          <li>Process bank-to-bank, wallet-to-bank and FMN-to-bank refunds and airline backend refunds, following internal approval and supporting-document requirements.</li>
-          <li>Support settlement validation for airline refunds.</li>
-          <li>Handle payment updates, payment processing, ID-to-ID transfers and NRFD-related transactions.</li>
-          <li>Coordinate supplier registration and payment-related follow-ups.</li>
-          <li>Prepare daily bank debit summaries and maintain accurate accounting records and reconciliation reports in Excel.</li>
-          <li>Support month-end accounting activities.</li></ul>
-      </div>
-    </div>
-    <div class="job">
-      <div class="when">Aug 2018 – Jan 2020</div>
-      <div>
-        <h3>Accounts &amp; Compliance Executive</h3>
-        <div class="co">Kautilya Corporate Solutions Pvt. Ltd.</div>
-        <ul>
-          <li>Handled GST reconciliation and supported GST filing and compliance for clients.</li>
-          <li>Posted ledgers and prepared journal entries.</li>
-          <li>Prepared statutory documentation and coordinated with clients.</li>
-          <li>Supported ROC/MCA filings including AOC-4, MGT-7 and DIR-3 KYC.</li>
-          <li>Prepared monthly compliance reports.</li></ul>
-      </div>
-    </div>
-    <div class="job">
-      <div class="when">Apr 2018 – Jul 2018</div>
-      <div>
-        <h3>Assistant Auditor</h3>
-        <div class="co">A.K. Sinha &amp; Co.</div>
-        <ul>
-          <li>Assisted audits of schools, banks and institutions.</li>
-          <li>Performed ledger scrutiny, voucher verification and reconciliation support.</li>
-          <li>Supported preparation of trial balance and financial statements.</li></ul>
-      </div>
-    </div>
-    <div class="job">
-      <div class="when">Jul 2017 – Feb 2018</div>
-      <div>
-        <h3>Insurance Advisor</h3>
-        <div class="co">Bajaj Capital Ltd.</div>
-        <ul>
-          <li>Advised clients on insurance and investment products.</li>
-          <li>Handled documentation, policy processing and renewals.</li></ul>
-      </div>
-    </div>
+    <div class="job"><div class="when">Jan 2020 – Present</div><div><h3>Senior Accounts Executive</h3><div class="co">Ebix Travels Pvt. Ltd. (Via.com), Bengaluru</div><ul>
+      <li>Verify agent and distributor deposits against bank statements and update agent wallet balances after verification.</li>
+      <li>Perform daily bank-to-system and payment gateway reconciliation across PayU, CCAvenue, TPSL, HDFC and ICICI; identify and resolve mismatches.</li>
+      <li>Process bank-to-bank, wallet-to-bank and FMN-to-bank refunds and airline backend refunds, following internal approval and supporting-document requirements.</li>
+      <li>Support settlement validation for airline refunds.</li><li>Handle payment updates, payment processing, ID-to-ID transfers and NRFD-related transactions.</li>
+      <li>Coordinate supplier registration and payment-related follow-ups.</li><li>Prepare daily bank debit summaries and maintain accurate accounting records and reconciliation reports in Excel.</li><li>Support month-end accounting activities.</li></ul></div></div>
+    <div class="job"><div class="when">Aug 2018 – Jan 2020</div><div><h3>Accounts &amp; Compliance Executive</h3><div class="co">Kautilya Corporate Solutions Pvt. Ltd.</div><ul>
+      <li>Handled GST reconciliation and supported GST filing and compliance for clients.</li><li>Posted ledgers and prepared journal entries.</li><li>Prepared statutory documentation and coordinated with clients.</li><li>Supported ROC/MCA filings including AOC-4, MGT-7 and DIR-3 KYC.</li><li>Prepared monthly compliance reports.</li></ul></div></div>
+    <div class="job"><div class="when">Apr 2018 – Jul 2018</div><div><h3>Assistant Auditor</h3><div class="co">A.K. Sinha &amp; Co.</div><ul>
+      <li>Assisted audits of schools, banks and institutions.</li><li>Performed ledger scrutiny, voucher verification and reconciliation support.</li><li>Supported preparation of trial balance and financial statements.</li></ul></div></div>
+    <div class="job"><div class="when">Jul 2017 – Feb 2018</div><div><h3>Insurance Advisor</h3><div class="co">Bajaj Capital Ltd.</div><ul><li>Advised clients on insurance and investment products.</li><li>Handled documentation, policy processing and renewals.</li></ul></div></div>
   </section>
-
-  <section id="skills">
-    <h2 class="sec">Skills</h2>
-    <div class="skills">
-      <div>
-        <h3>Accounting and finance</h3>
-        <ul class="chips">
-          <li>Bank reconciliation</li><li>Payment gateway reconciliation</li><li>Deposit verification</li><li>Refund processing</li><li>Payment processing</li><li>Journal entries</li><li>Ledger posting</li><li>MIS and daily bank summaries</li><li>Audit support</li><li>Month-end support</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Tax and compliance</h3>
-        <ul class="chips">
-          <li>GST reconciliation and compliance support</li><li>TDS processes</li><li>ROC / MCA filing exposure</li><li>Statutory documentation</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Tools</h3>
-        <ul class="chips">
-          <li>Tally Prime</li><li>Microsoft Excel</li><li>Pivot Tables</li><li>VLOOKUP / XLOOKUP</li><li>SUMIFS</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
+  <section id="skills"><h2 class="sec">Skills</h2><div class="skills">
+    <div><h3>Accounting and finance</h3><ul class="chips"><li>Bank reconciliation</li><li>Payment gateway reconciliation</li><li>Deposit verification</li><li>Refund processing</li><li>Payment processing</li><li>Journal entries</li><li>Ledger posting</li><li>MIS and daily bank summaries</li><li>Audit support</li><li>Month-end support</li></ul></div>
+    <div><h3>Tax and compliance</h3><ul class="chips"><li>GST reconciliation and compliance support</li><li>TDS processes</li><li>ROC / MCA filing exposure</li><li>Statutory documentation</li></ul></div>
+    <div><h3>Tools</h3><ul class="chips"><li>Tally Prime</li><li>Microsoft Excel</li><li>Pivot Tables</li><li>VLOOKUP / XLOOKUP</li><li>SUMIFS</li></ul></div>
+  </div></section>
   <section id="projects">
-    <h2 class="sec">Selected Projects</h2>
-    <p class="about">Alongside my finance and accounting work, I build practical digital projects focused on business operations, food services and career support.</p>
+    <h2 class="sec">Selected Projects</h2><p class="about">Alongside my finance and accounting work, I build practical digital projects focused on business operations, food services and career support.</p>
     <div class="project-grid">
-      <article class="project-card">
-        <div class="project-type">Finance &amp; compliance</div>
-        <h3>DigiCafe</h3>
-        <p>Digital services initiative for accounting, GST, income tax and business compliance support.</p>
-        <a href="https://vikashp23.github.io/Digicafe/" target="_blank" rel="noopener">Visit DigiCafe</a>
-      </article>
-      <article class="project-card">
-        <div class="project-type">Career development</div>
-        <h3>DigiCareer</h3>
-        <p>Career resource platform with job opportunity links and interview practice features.</p>
-        <a href="https://digicareer.onrender.com" target="_blank" rel="noopener">Visit DigiCareer</a>
-      </article>
-      <article class="project-card">
-        <div class="project-type">Travel planning</div>
-        <h3>DigiTravel</h3>
-        <p>Travel planning website with trip discovery and rail information features under development.</p>
-        <a href="https://vikashp23.github.io/Digitravel/" target="_blank" rel="noopener">Visit DigiTravel</a>
-      </article>
-      <article class="project-card">
-        <div class="project-type">Food &amp; small business</div>
-        <h3>TasteHub</h3>
-        <p>Vegetarian homemade food venture with a menu website and customer ordering information.</p>
-        <a href="https://vikashp23.github.io/tastehub-website/index.html" target="_blank" rel="noopener">Visit TasteHub</a>
-      </article>
+      <article class="project-card"><div class="project-type">Finance &amp; compliance</div><h3>DigiCafe</h3><p>Digital services initiative for accounting, GST, income tax and business compliance support.</p><a href="https://vikashpathak-in.github.io/Digicafe/" target="_blank" rel="noopener">Visit DigiCafe website</a></article>
+      <article class="project-card"><div class="project-type">Career development</div><h3>DigiCareer</h3><p>Career resource platform with job opportunity links and interview practice features.</p><a href="https://digicareer.onrender.com" target="_blank" rel="noopener">Visit DigiCareer website</a></article>
+      <article class="project-card"><div class="project-type">Travel planning</div><h3>DigiTravel</h3><p>Travel planning website with trip discovery and rail information features under development.</p><a href="https://vikashpathak-in.github.io/Digitravel/" target="_blank" rel="noopener">Visit DigiTravel website</a></article>
+      <article class="project-card"><div class="project-type">Food &amp; small business</div><h3>TasteHub</h3><p>Vegetarian homemade food venture with a menu website and customer ordering information.</p><a href="https://vikashpathak-in.github.io/tastehub-website/index.html" target="_blank" rel="noopener">Visit TasteHub website</a></article>
     </div>
   </section>
-
-  <section id="resume-tools">
-    <h2 class="sec">Interactive Resume</h2>
-    <p class="about">Use these quick actions to explore my experience or access the resume format you need.</p>
-    <div class="resume-actions">
-      <button class="btn primary" type="button" id="expand-experience">Show all experience details</button>
-      <button class="btn ghost" type="button" id="collapse-experience">Show concise view</button>
-      <button class="btn ghost" type="button" id="print-resume">Print / Save as PDF</button>
-    </div>
+  <section id="resume-tools"><h2 class="sec">Interactive Resume</h2><p class="about">Use these quick actions to explore my experience or access the resume format you need.</p>
+    <div class="resume-actions"><button class="btn primary" type="button" id="expand-experience">Show all experience details</button><button class="btn ghost" type="button" id="collapse-experience">Show concise view</button><button class="btn ghost" type="button" id="print-resume">Print / Save as PDF</button></div>
     <div class="resume-note" id="resume-note" aria-live="polite">Experience details are shown on the page. Use Print / Save as PDF to create a copy from your browser.</div>
   </section>
-
-  <section id="education">
-    <h2 class="sec">Education and certification</h2>
-    <div class="edu">
-      <div><strong>Master of Commerce (M.Com)</strong><span>Indira Gandhi National Open University (IGNOU), 2017–2019</span></div>
-      <div><strong>Bachelor of Business Management (BBM)</strong><span>Mirza Ghalib College, Gaya, 2011–2014</span></div>
-      <div><strong>Tax Pro Professional</strong><span>ITAA Education Pvt. Ltd. Advanced accounting, direct taxation and GST</span></div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2 class="sec">Contact</h2>
-    <ul class="contact-list">
-      <li>Bengaluru, Karnataka, India</li>
-      <li><a href="mailto:email.vikashpathak@gmail.com">email.vikashpathak@gmail.com</a></li>
-      <li><a href="tel:+918539979271">+91 85399 79271</a></li>
-      <li><a href="https://www.linkedin.com/in/vikashpathak2306/" target="_blank" rel="noopener">LinkedIn profile</a></li>
-      <li><a href="https://github.com/Vikashp23" target="_blank" rel="noopener">GitHub profile</a></li>
-    </ul>
-    <a class="btn primary" href="mailto:email.vikashpathak@gmail.com?subject=Opportunity%20for%20Vikash">Send an email</a>
-  </section>
-
+  <section id="education"><h2 class="sec">Education and certification</h2><div class="edu">
+    <div><strong>Master of Commerce (M.Com)</strong><span>Indira Gandhi National Open University (IGNOU), 2017–2019</span></div>
+    <div><strong>Bachelor of Business Management (BBM)</strong><span>Mirza Ghalib College, Gaya, 2011–2014</span></div>
+    <div><strong>Tax Pro Professional</strong><span>ITAA Education Pvt. Ltd. Advanced accounting, direct taxation and GST</span></div>
+  </div></section>
+  <section id="contact"><h2 class="sec">Contact</h2><ul class="contact-list">
+    <li>Bengaluru, Karnataka, India</li><li><a href="mailto:email.vikashpathak@gmail.com">email.vikashpathak@gmail.com</a></li>
+    <li><a href="tel:+918539979271">+91 85399 79271</a></li><li><a href="https://www.linkedin.com/in/vikashpathak2306/" target="_blank" rel="noopener">LinkedIn profile</a></li>
+  </ul><a class="btn primary" href="mailto:email.vikashpathak@gmail.com?subject=Opportunity%20for%20Vikash">Send an email</a></section>
   <footer>© Vikash Pathak. References available on request.</footer>
 </div>
-
 <script>
 (function(){
   const root=document.documentElement;
@@ -342,61 +210,35 @@ body.concise-experience #experience .job:nth-of-type(n+3){display:none}
   const savedTheme=localStorage.getItem('vikash-portfolio-theme');
   if(savedTheme==='dark'||savedTheme==='light') root.setAttribute('data-theme',savedTheme);
   function syncThemeButton(){
-    const dark=root.getAttribute('data-theme')==='dark' ||
-      (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const dark=root.getAttribute('data-theme')==='dark' || (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
     themeButton.textContent=dark?'Light mode':'Dark mode';
     themeButton.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
   }
   syncThemeButton();
   themeButton.addEventListener('click',function(){
-    const currentlyDark=root.getAttribute('data-theme')==='dark' ||
-      (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    const nextTheme=currentlyDark?'light':'dark';
-    root.setAttribute('data-theme',nextTheme);
-    localStorage.setItem('vikash-portfolio-theme',nextTheme);
-    syncThemeButton();
+    const currentlyDark=root.getAttribute('data-theme')==='dark' || (!root.hasAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const nextTheme=currentlyDark?'light':'dark';root.setAttribute('data-theme',nextTheme);localStorage.setItem('vikash-portfolio-theme',nextTheme);syncThemeButton();
   });
   const hour=new Date().getHours();
   const greeting=hour<12?'Good morning':hour<17?'Good afternoon':'Good evening';
-  const messages={
-    morning:'Start the day with clear numbers and reliable reconciliations. Explore my accounting and finance experience.',
-    afternoon:'Good afternoon. See how I work across bank reconciliation, payment gateways, refunds and accounting operations.',
-    evening:'Good evening. Thank you for visiting. Explore my experience, skills and resume.'
-  };
+  const messages={morning:'Start the day with clear numbers and reliable reconciliations. Explore my accounting and finance experience.',afternoon:'Good afternoon. See how I work across bank reconciliation, payment gateways, refunds and accounting operations.',evening:'Good evening. Thank you for visiting. Explore my experience, skills and resume.'};
   const backdrop=document.getElementById('greeting-backdrop');
   const close=()=>{backdrop.classList.remove('is-visible');sessionStorage.setItem('vikash-portfolio-greeting-dismissed','1');};
-  document.getElementById('greeting-title').textContent=greeting;
-  document.getElementById('greeting-message').textContent=messages[hour<12?'morning':hour<17?'afternoon':'evening'];
+  document.getElementById('greeting-title').textContent=greeting;document.getElementById('greeting-message').textContent=messages[hour<12?'morning':hour<17?'afternoon':'evening'];
   document.getElementById('greeting-close').addEventListener('click',close);
   document.getElementById('greeting-explore').addEventListener('click',function(){close();document.getElementById('experience').scrollIntoView({behavior:'smooth'});});
   backdrop.addEventListener('click',function(e){if(e.target===backdrop)close();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&backdrop.classList.contains('is-visible'))close();});
-  if(!sessionStorage.getItem('vikash-portfolio-greeting-dismissed')){
-    window.setTimeout(()=>backdrop.classList.add('is-visible'),700);
-  }
+  if(!sessionStorage.getItem('vikash-portfolio-greeting-dismissed')) window.setTimeout(()=>backdrop.classList.add('is-visible'),700);
 })();
 </script>
-
-
 <script>
 (function(){
-  const expand=document.getElementById('expand-experience');
-  const collapse=document.getElementById('collapse-experience');
-  const print=document.getElementById('print-resume');
-  const note=document.getElementById('resume-note');
-  expand.addEventListener('click',function(){
-    document.body.classList.remove('concise-experience');
-    note.textContent='All listed roles and responsibilities are visible.';
-    document.getElementById('experience').scrollIntoView({behavior:'smooth'});
-  });
-  collapse.addEventListener('click',function(){
-    document.body.classList.add('concise-experience');
-    note.textContent='Concise view enabled. Earlier experience details are temporarily collapsed; choose Show all experience details to restore them.';
-    document.getElementById('experience').scrollIntoView({behavior:'smooth'});
-  });
+  const expand=document.getElementById('expand-experience'),collapse=document.getElementById('collapse-experience'),print=document.getElementById('print-resume'),note=document.getElementById('resume-note');
+  expand.addEventListener('click',function(){document.body.classList.remove('concise-experience');note.textContent='All listed roles and responsibilities are visible.';document.getElementById('experience').scrollIntoView({behavior:'smooth'});});
+  collapse.addEventListener('click',function(){document.body.classList.add('concise-experience');note.textContent='Concise view enabled. Earlier experience details are temporarily collapsed; choose Show all experience details to restore them.';document.getElementById('experience').scrollIntoView({behavior:'smooth'});});
   print.addEventListener('click',function(){window.print();});
 })();
 </script>
-
 </body>
 </html>
